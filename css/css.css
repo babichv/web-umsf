@@ -1,0 +1,61 @@
+body{
+    background: url(../images/content/dart_weider.jpg);
+    background-repeat: no-repeat, repeat-x;
+    background-size: 460px;
+    background-position: 20px 20px;
+    
+}
+form{
+    position: fixed;
+    top: 130px;
+    left: 530px;
+    padding: 20px; 
+}
+.header{
+    color: rgb(255, 255, 255);
+    font-size: 32px;
+    position: fixed;
+    top: 120px;
+    left: 100px;
+}
+h3{
+    color: rgb(177, 177, 177);
+    font-family:Comic Sans MS;
+    font-size: 14px;
+}
+.form__button{
+    position: fixed;
+    top: 460px;
+    left: 550px;
+    font-family:Comic Sans MS;
+    background-color: red; 
+    border: none;
+    color: rgb(230, 230, 230);
+    padding: 20px;
+    text-align: center;
+    font-size: 12px;
+    margin: 2px 2px;
+    border-radius: 50px;
+   
+}
+input{
+    border: none;
+    border-bottom: 1px solid rgb(177, 177, 177);
+}
+.used{
+    font-family:Comic Sans MS;
+    font-size: 13px;
+    text-decoration-line: underline;
+    color: rgb(177, 177, 177);
+    position: fixed;
+    top: 483px;
+    left: 690px;
+}
+nav{   
+    position: fixed;
+    top: 533px;
+    left: 80px;
+}
+b{
+    color: rgb(255, 0, 0);
+}
