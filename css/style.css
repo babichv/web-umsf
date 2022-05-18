@@ -1,28 +1,296 @@
-.block{
-    width: 50%;
-    margin-left: 10px;
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
 }
-.container{
-    margin: 0 250px;
+
+/* Убираем внутренние отступы */
+ul[class],
+ol[class] {
+  padding: 0;
 }
-.item{
-    display: flex;
-    justify-content: center;
+
+/* Убираем внешние отступы */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul[class],
+ol[class],
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+  margin: 0;
 }
-.pic{
-    width: 450px;
-    height: 313px;
+
+/* Выставляем основные настройки по-умолчанию для body */
+body {
+  min-height: 100vh;
+  scroll-behavior: smooth;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* Удаляем стандартную стилизацию для всех ul и il, у которых есть атрибут class*/
+ul[class],
+ol[class] {
+  list-style: none;
+}
+
+/* Элементы a, у которых нет класса, сбрасываем до дефолтных стилей */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Упрощаем работу с изображениями */
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* Указываем понятную периодичность в потоке данных у article*/
+article > * + * {
+  margin-top: 1em;
+}
+
+/* Наследуем шрифты для инпутов и кнопок */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Удаляем все анимации и переходы для людей, которые предпочитай их не использовать */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
   }
-button{
-    border: none;
-    background: rgb(147, 151, 126);
-    color: #fff;
-    border-radius: 5px;
-    padding: 10px;
-    cursor: pointer;
-    opacity: 1;
-    transition: 0.3s;
 }
-button:hover {
-    background: rgb(80, 79, 68);
+
+body {
+    font-family: 'Noto Serif', serif;
+}
+.container {
+    position: relative;
+    margin: 0 325px;
+}
+.btn {
+    display: inline-block;
+    color: #684d56;
+    background-color: #fff;
+    border: 1px solid #684d56;
+    padding: 15px 25px;
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: .6px;
+    text-decoration: none;
+    border-radius: 35px;
+    transition: background-color .3s linear;
+    margin-top: 39px;
+}
+.btn:hover {
+    background-color: #ccc;
+}
+
+.title {
+    font-size: 25px;
+    letter-spacing: 1.1px;
+     margin-top: 45px;
+
+}
+
+.box-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 230px;
+    height: 85px;
+}
+
+.logo {
+    display: block;
+    color: #555555;
+    font-size: 21px;
+    font-weight: 600;
+    text-transform: uppercase;
+    text-decoration: none;
+    letter-spacing: 3.1px;
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav__item {
+    margin-left: 45px;
+    list-style-type: none;
+}
+.nav__link {
+    color: #959595;
+    text-decoration: none;
+    font-size: 17px;
+    transition: color .2s linear;
+}
+.nav__link:hover {
+    color: #cdbd5a;
+}
+
+.header-content {
+    color: #fff;
+}
+.header-container {
+    position: relative;
+}
+.header-bg {
+    background-image: url(../images/home-bg.jpg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    color: #fff;
+    text-align: center;
+    padding: 30% 0;
+    position: relative;
+    filter: brightness(55%);
+}
+
+.header-content {
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    margin-top: 20%;
+    top: 0;
+}
+
+.header-content {
+    font-size: 31px;
+
+}
+.title-logo {
+    font-size: 64px;
+    letter-spacing: -0.6px;
+}
+.header-content p {
+    margin-top: 5px;
+    color: #bfb54d;
+    font-size: 14px;
+    letter-spacing: 1.5px;
+}
+.header-btn {
+    display: inline-block;
+    color: #684d56;
+    background-color: #fff;
+    padding: 15px 25px;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    text-decoration: none;
+    text-transform: uppercase;
+    border-radius: 35px;
+    transition: background-color .3s linear;
+    margin: 0 auto;
+    margin-top: 49px;
+}
+.header-btn:hover {
+    background-color: #ccc;
+}
+
+.page-support {
+    padding-top: 75px;
+   
+    
+}
+
+.page-support > .container:not(:first-child) {
+    padding-bottom: 65px;
+    border-bottom: 1px solid #ccc;
+}
+/* .page-support > .container::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background-color: #000;
+} */
+.box-info {
+    margin-top: 11px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 369px;
+    color: #6e334d;
+}
+.page-support__avatar {
+    width: 43px;
+    border-radius: 50%;
+}
+
+.box-info p {
+    font-size: 14px;
+    letter-spacing: 0.6px;
+}
+
+.box-info time {
+    font-size: 14px;
+    letter-spacing: 0.6px;
+}
+
+.page-support > .container > p {
+    margin-top: 25px;
+    color: #684d56;
+    font-size: 14px;
+    letter-spacing: 0.7px;
+}
+
+.footer {
+    background-color: #000;
+    color: #fff;
+    margin-top: 115px;
+    padding: 93px 0;
+}
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer__title {
+    font-size: 28px;
+    letter-spacing: -0.4px;
+}
+
+ .footer-left {
+    width: 50%;
+}
+
+.footer-left > p {
+    font-size: 14px;
+    letter-spacing: 0.7px;
+    line-height: 25px;
+    margin-top: 13px;
+}
+
+.footer-left > .footer__rights {
+    margin-top: 20px;
+}
+
+/* .footer-rigth {
+    width: 50%;
+} */
+
+.footer-rigth > p {
+    font-size: 14px;
+    margin-top: 13px;
+    letter-spacing: 0.7px;
 }
